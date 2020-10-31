@@ -1,0 +1,47 @@
+[alias]
+	graph = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+	gr = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+	cm = commit
+	cmm = commit -m
+	ch = checkout
+	chm = checkout master
+	chd = checkout dev
+	st = status
+	ps = push origin
+	psm = push origin master
+	psd = push origin dev
+	pl = pull origin
+	plm = pull origin master
+	pld = pull origin dev
+	a = add .
+	diffc = diff --cached
+
+	ff = flow feature
+	ffs = flow feature start
+	ffp = flow feature publish
+	fff = flow feature finish -p
+
+	fr = flow release
+	frs = flow release start
+	frp = flow release publish
+	frf = flow release finish -p
+
+	fb = flow bugfix
+	fbs = flow bugfix start
+	fbp = flow bugfix publish
+	fbf = flow bugfix finish -p
+
+	fh = flow hotfix
+	fhs = flow hotfix start
+	fhp = flow hotfix publish
+	fhf = flow hotfix finish -p
+[core]
+	editor = code --wait
+[fetch]
+	prune = true
+[merge]
+	tool = code --wait \"$MERGED\"
+[pull]
+	rebase = false
+[push]
+	default = simple
